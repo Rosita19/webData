@@ -7,6 +7,8 @@ st.title("""
 PERHITUNGAN DATA
 """)
 
+test = st.sidebar.radio("Navigation", ['Home', 'About us', 'Contact us'])
+
 #Fractional Knapsack Problem
 #Getting input from user
 kodekontrak=int(st.number_input("Kode Kontrak: ",0))
