@@ -8,7 +8,7 @@ test = st.sidebar.radio("Menu", ['Learn Data', 'Preprocessing', 'Model', 'Implem
 
 if test == "Learn Data":
    st.title("""
-      Data Pasien Menderita Stroke
+      Data Kredit Card
       """)
    df = pd.read_csv("https://raw.githubusercontent.com/Rosita19/datamining/main/credit_score.csv")
    df
