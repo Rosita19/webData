@@ -2,8 +2,8 @@ import streamlit as st
 import re
 import pandas as pd 
 import numpy as np
-from sklearn.neighbors import KNeighborsClassifier
-from numpy import array
+import KNeighborsClassifier
+import array
 
 test = st.sidebar.radio("Menu", ['Learn Data', 'Preprocessing', 'Model', 'Implementasi'])
 
