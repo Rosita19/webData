@@ -22,6 +22,7 @@ elif test == "Preprocessing":
    X = df.drop(columns="stroke")
    y = df.stroke
 
+   import Preprocessing
    le = preprocessing.LabelEncoder()
    le.fit(y)
    y = le.transform(y)
