@@ -10,13 +10,14 @@ if test == "Learn Data":
       Data Pasien Menderita Stroke
       """)
    df = pd.read_csv("https://raw.githubusercontent.com/Rosita19/datamining/main/healthcare-dataset-stroke-data.csv")
-   
+   df
 elif test == "Preprocessing":
    st.title("""
       Pemrosesan Data
       """)
    df = pd.read_csv("https://raw.githubusercontent.com/Rosita19/datamining/main/healthcare-dataset-stroke-data.csv")
-
+   df
+   
    df = df.drop(columns="id")
    X = df.drop(columns="stroke")
    y = df.stroke
