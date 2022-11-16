@@ -2,6 +2,8 @@ import streamlit as st
 import re
 import pandas as pd 
 import numpy as np
+from sklearn.neighbors import KNeighborsClassifier
+from numpy import array
 
 test = st.sidebar.radio("Menu", ['Learn Data', 'Preprocessing', 'Model', 'Implementasi'])
 
@@ -33,8 +35,7 @@ elif test == "Model":
    st.title("""
       Modeling 
       """)
-   from sklearn.neighbors import KNeighborsClassifier
-   from numpy import array
+
    
    menu = st.sidebar.radio("Pilihan", ['KNN', 'Gaussian Naive Bayes', 'Decision Tree'])
 
