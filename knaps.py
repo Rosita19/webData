@@ -22,12 +22,12 @@ elif test == "Preprocessing":
    X = df.drop(columns="stroke")
    y = df.stroke
 
-   from sklearn import preprocessing
-   le = preprocessing.LabelEncoder()
-   le.fit(y)
-   y = le.transform(y)
-   le.inverse_transform(y)
-   labels = pd.get_dummies(df.stroke).columns.values.tolist()
+#    from sklearn import preprocessing
+#    le = preprocessing.LabelEncoder()
+#    le.fit(y)
+#    y = le.transform(y)
+#    le.inverse_transform(y)
+#    labels = pd.get_dummies(df.stroke).columns.values.tolist()
    
 
    dataHasil = pd.concat([df,dataOlah], axis = 1)
