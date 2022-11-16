@@ -30,6 +30,9 @@ elif test == "Preprocessing":
    le.inverse_transform(y)
    labels = pd.get_dummies(df.stroke).columns.values.tolist()
    labels
+   dataHasil = pd.concat([df,dataOlah], axis = 1)
+   dataHasil
+   
    kodekontrak=int(st.number_input("Kode Kontrak: ",0))
    Pendapat=int(st.number_input("Pendapatan Setahun : ",0))
    durasipinjaman=int(st.number_input("Durasi Pinjaman : ",0))
