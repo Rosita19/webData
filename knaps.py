@@ -2,6 +2,7 @@ import streamlit as st
 import re
 import pandas as pd 
 import numpy as np
+import sklearn
 
 test = st.sidebar.radio("Menu", ['Learn Data', 'Preprocessing', 'Model', 'Implementasi'])
 
@@ -17,21 +18,20 @@ elif test == "Preprocessing":
       """)
    df = pd.read_csv("https://raw.githubusercontent.com/Rosita19/datamining/main/healthcare-dataset-stroke-data.csv")
    df
-   
+
    df = df.drop(columns="id")
    X = df.drop(columns="stroke")
    y = df.stroke
 
-#    from sklearn import preprocessing
-#    le = preprocessing.LabelEncoder()
-#    le.fit(y)
-#    y = le.transform(y)
-#    le.inverse_transform(y)
-#    labels = pd.get_dummies(df.stroke).columns.values.tolist()
-   
+   from sklearn import preprocessing
+   le = preprocessing.LabelEncoder()
+   le.fit(y)
+   y = le.transform(y)
+   y
+   le.inverse_transform(y)
+   labels = pd.get_dummies(df.stroke).columns.values.tolist()
+   labels
 
-   dataHasil = pd.concat([df,dataOlah], axis = 1)
-   dataHasil
    kodekontrak=int(st.number_input("Kode Kontrak: ",0))
    Pendapat=int(st.number_input("Pendapatan Setahun : ",0))
    durasipinjaman=int(st.number_input("Durasi Pinjaman : ",0))
