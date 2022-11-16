@@ -9,7 +9,7 @@ PERHITUNGAN DATA
 
 test = st.sidebar.radio("Menu", ['Learn Data', 'Preprocessing', 'Model', 'Implementasi'])
 
-if test == "Home":
+if test == "Learn Data":
     st.subheader("Hai, saya Jumadi :wave:")
     st.title("Saya Seorang coach artificial intelligence dari Indonesia")
     st.write(
