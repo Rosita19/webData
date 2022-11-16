@@ -7,7 +7,7 @@ st.title("""
 PERHITUNGAN DATA
 """)
 
-test = st.sidebar.radio("Navigation", ['Home', 'About us', 'Contact us'])
+test = st.sidebar.radio("Menu", ['Learn Data', 'Preprocessing', 'Model', 'Implementasi'])
 
 #Fractional Knapsack Problem
 #Getting input from user
