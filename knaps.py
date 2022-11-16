@@ -17,6 +17,8 @@ elif test == "Preprocessing":
       """)
    df = pd.read_csv("https://raw.githubusercontent.com/Rosita19/datamining/main/healthcare-dataset-stroke-data.csv")
    df
+   dataubah=df.drop(columns=['gender','ever_married','work_type','Residence_type','smoking_status'])
+   df
 
    kodekontrak=int(st.number_input("Kode Kontrak: ",0))
    Pendapat=int(st.number_input("Pendapatan Setahun : ",0))
