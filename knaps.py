@@ -22,7 +22,6 @@ elif test == "Preprocessing":
    X = df.drop(columns="stroke")
    y = df.stroke
 
-   from sklearn import preprocessing
    le = preprocessing.LabelEncoder()
    le.fit(y)
    y = le.transform(y)
