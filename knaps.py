@@ -2,7 +2,6 @@ import streamlit as st
 import re
 import pandas as pd 
 import numpy as np
-import sklearn
 
 test = st.sidebar.radio("Menu", ['Learn Data', 'Preprocessing', 'Model', 'Implementasi'])
 
