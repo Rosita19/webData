@@ -5,6 +5,13 @@ import numpy as np
 
 test = st.sidebar.radio("Menu", ['Learn Data', 'Preprocessing', 'Model', 'Implementasi'])
 
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+
+local_css("style/style.css")
+
 if test == "Learn Data":
    st.title("""
       Data Pasien Menderita Stroke
@@ -51,7 +58,7 @@ elif test == "Model":
     print(metode1.score(X_test, y_test))
     y_pred = metode1.predict(scaler.transform(array([[50.0,0,1,105.92,0,0,1,0,1,0,1,1,1,1,1,1,1,0,0,0,0]])))
     le.inverse_transform(y_pred)[0]
-    
+
 elif test == "Implementasi":
    st.title("""
       Implementasi Data
