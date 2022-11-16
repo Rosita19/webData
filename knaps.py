@@ -33,7 +33,26 @@ elif test == "Model":
    st.title("""
       Modeling 
       """)
+   from sklearn.neighbors import KNeighborsClassifier
+   from numpy import array
+   
+   menu = st.sidebar.radio("Pilihan", ['KNN', 'Gaussian Naive Bayes', 'Decision Tree'])
 
+   if test == "KNN":
+    st.title("""
+        KNN (K-Nearest Neighbor)
+        """)
+    df = pd.read_csv("https://raw.githubusercontent.com/Rosita19/datamining/main/healthcare-dataset-stroke-data.csv")
+    df
+    
+    metode1 = KNeighborsClassifier(n_neighbors=3)
+    metode1.fit(X_train, y_train)
+    print(metode1.score(X_train, y_train))
+    print(metode1.score(X_test, y_test))
+    y_pred = metode1.predict(scaler.transform(array([[50.0,0,1,105.92,0,0,1,0,1,0,1,1,1,1,1,1,1,0,0,0,0]])))
+    le.inverse_transform(y_pred)[0]
+
+    
 elif test == "Implementasi":
    st.title("""
       Implementasi Data
@@ -41,3 +60,6 @@ elif test == "Implementasi":
 
 
 
+
+   
+   
