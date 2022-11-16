@@ -2,8 +2,6 @@ import streamlit as st
 import re
 import pandas as pd 
 import numpy as np
-import KNeighborsClassifier
-import array
 
 test = st.sidebar.radio("Menu", ['Learn Data', 'Preprocessing', 'Model', 'Implementasi'])
 
@@ -35,7 +33,8 @@ elif test == "Model":
    st.title("""
       Modeling 
       """)
-
+   from sklearn.neighbors import KNeighborsClassifier
+   from numpy import array
    
    menu = st.sidebar.radio("Pilihan", ['KNN', 'Gaussian Naive Bayes', 'Decision Tree'])
 
@@ -52,7 +51,6 @@ elif test == "Model":
     print(metode1.score(X_test, y_test))
     y_pred = metode1.predict(scaler.transform(array([[50.0,0,1,105.92,0,0,1,0,1,0,1,1,1,1,1,1,1,0,0,0,0]])))
     le.inverse_transform(y_pred)[0]
-
     
 elif test == "Implementasi":
    st.title("""
@@ -61,6 +59,3 @@ elif test == "Implementasi":
 
 
 
-
-   
-   
