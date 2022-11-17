@@ -7,15 +7,15 @@ test = st.sidebar.radio("Menu", ['Learn Data', 'Preprocessing', 'Model', 'Implem
 
 if test == "Learn Data":
    st.title("""
-      Data Pasien Menderita Stroke
+      Data Kredit Card
       """)
-   df = pd.read_csv("https://raw.githubusercontent.com/Rosita19/datamining/main/healthcare-dataset-stroke-data.csv")
+   df = pd.read_csv("https://raw.githubusercontent.com/Rosita19/datamining/main/credit_score.csv")
    df
 elif test == "Preprocessing":
    st.title("""
       Pemrosesan Data
       """)
-   df = pd.read_csv("https://raw.githubusercontent.com/Rosita19/datamining/main/healthcare-dataset-stroke-data.csv")
+   df = pd.read_csv("https://raw.githubusercontent.com/Rosita19/datamining/main/credit_score.csv")
    df
    dataubah=df.drop(columns=['gender','ever_married','work_type','Residence_type','smoking_status'])
    dataubah
@@ -45,7 +45,7 @@ elif test == "Model":
     st.title("""
         KNN (K-Nearest Neighbor)
         """)
-    df = pd.read_csv("https://raw.githubusercontent.com/Rosita19/datamining/main/healthcare-dataset-stroke-data.csv")
+    df = pd.read_csv("https://raw.githubusercontent.com/Rosita19/datamining/main/credit_score.csv")
     df
     
     metode1 = KNeighborsClassifier(n_neighbors=3)
