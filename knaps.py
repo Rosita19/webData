@@ -9,13 +9,13 @@ if test == "Learn Data":
    st.title("""
       Data Pasien Menderita Stroke
       """)
-   df = pd.read_csv("https://raw.githubusercontent.com/Rosita19/datamining/main/healthcare-dataset-stroke-data.csv")
+   df = pd.read_csv("https://raw.githubusercontent.com/Rosita19/datamining/main/credit_score.csv")
    df
 elif test == "Preprocessing":
    st.title("""
       Pemrosesan Data
       """)
-   df = pd.read_csv("https://raw.githubusercontent.com/Rosita19/datamining/main/healthcare-dataset-stroke-data.csv")
+   df = pd.read_csv("https://raw.githubusercontent.com/Rosita19/datamining/main/credit_score.csv")
    df
    dataubah=df.drop(columns=['gender','ever_married','work_type','Residence_type','smoking_status'])
    df
